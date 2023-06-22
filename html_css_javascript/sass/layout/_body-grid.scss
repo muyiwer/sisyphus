@@ -1,0 +1,32 @@
+body {
+    display: grid;
+    grid-template-rows: 72px 80px auto auto;
+    @include respond(phone){
+        grid-template-rows: 72px 80px auto auto;
+    }
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+  }
+  .heading{
+    display: flex;
+    border: $border;
+  }
+  .main{
+    display: grid;
+    grid-template-columns: 60% 20% 19.5%;
+    width: 100vw;
+    gap: 3px;
+    @include respond(phone){
+        grid-template-columns: 100%;
+        grid-template-rows: 60% 39%;
+        height: 600px;
+        width: 100%;
+    }
+  }
+
+  

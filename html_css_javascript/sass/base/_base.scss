@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Satoshi-Regular" !important;
+  background-color: rgba($color: $bg-primary, $alpha: 1);
+  font-size: $font-size-base;
+  color: rgba($color: $color-primary, $alpha: 1);
+  box-sizing: border-box;
+}

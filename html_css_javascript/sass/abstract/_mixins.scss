@@ -1,0 +1,24 @@
+/** MEDIA QUERY MANAGER*/
+/** 
+0 - 600px   Phone
+600px +: tab and desktop
+*/
+
+/** 
+$breakpoint argument choices
+- phone
+- desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == desktop) {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+}

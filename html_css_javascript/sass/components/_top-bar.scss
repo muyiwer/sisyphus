@@ -1,0 +1,14 @@
+.header__left {
+  display: flex;
+  gap: 48px;
+}
+.header__left-menu {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+.header__left-logo{
+    border-right: 1px solid #A7B1BC;
+    display: flex;
+    width: 160px;
+}

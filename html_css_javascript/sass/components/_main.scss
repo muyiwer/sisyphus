@@ -1,0 +1,42 @@
+.main__chart {
+  height: 561px;
+  border: $border;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.main__orderbook {
+  height: 561px;
+  border: $border;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.main__purchase {
+  height: 625px;
+  border: $border;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.main__order {
+  border: $border;
+  @include respond(desktop) {
+    grid-column: 1/3;
+    margin-top: -60px;
+    height: 561px;
+  }
+  @include respond(phone) {
+    height: auto;
+  }
+}
+.main__orderchart {
+  @include respond(desktop) {
+    display: none;
+  }
+  @include respond(phone) {
+    display: block;
+    height: auto;
+    border: $border;
+  }
+}
