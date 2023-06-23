@@ -1,0 +1,65 @@
+.rounded-full {
+  border-radius: 50%;
+}
+.mobile {
+  @include respond(desktop) {
+    display: none;
+  }
+}
+.desktop {
+  @include respond(phone) {
+    display: none;
+  }
+}
+.border-right {
+  border-right: $border-right !important;
+}
+.text-success {
+  color: $color-primary-success;
+}
+.text-dark {
+  color: $color-primary-dark;
+}
+.text-primary {
+  color: $color-primary;
+}
+.text-sm {
+  font-size: $font-size-small;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.gap-1 {
+  gap: 2px;
+}
+.gap-2 {
+  gap: 4px;
+}
+.align-center {
+  align-items: center !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.w-full {
+  width: 100vw;
+}
+.w-90 {
+  width: 90vw;
+}
+.space-nowrap {
+  white-space: nowrap;
+}

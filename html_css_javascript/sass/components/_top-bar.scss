@@ -6,9 +6,34 @@
   display: flex;
   gap: 48px;
   align-items: center;
+  @include respond(phone) {
+    display: none;
+  }
 }
 .header__left-logo{
-    border-right: 1px solid #A7B1BC;
+    border-right: $border-right;
     display: flex;
     width: 160px;
+    @include respond(phone) {
+        border-right: none;
+      }
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.header__right__profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    background-color: #12171D;
+    width: 181px;
+    height: 40px;
+    padding: 5px;
+    border-radius: $border-radius;
+    @include respond(phone){
+        display: none;
+    }
 }

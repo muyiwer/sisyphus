@@ -13,3 +13,6 @@ body {
   color: rgba($color: $color-primary, $alpha: 1);
   box-sizing: border-box;
 }
+.inactive-menu{
+  color: $color-primary-dark;
+}

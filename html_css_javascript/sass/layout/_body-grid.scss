@@ -1,21 +1,33 @@
 body {
     display: grid;
     grid-template-rows: 72px 80px auto auto;
+    grid-template-columns: 100vw;
     @include respond(phone){
-        grid-template-rows: 72px 80px auto auto;
+        grid-template-rows: 72px auto auto auto;
     }
   }
   header{
+    background-color: $bg-primary-light;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    padding: 10px;
   }
-  .heading{
+  .headings{
     display: flex;
-    border: $border;
+    gap: 8px;
+    align-items: center;
+    padding: 16px;
+    background-color: $bg-primary-light;
+    margin: 4px;
+    border-radius: $border-radius;
+    @include respond(phone){
+      flex-direction: column;
+      align-items:flex-start;
+      gap: 20px;
   }
+}
   .main{
     display: grid;
     grid-template-columns: 60% 20% 19.5%;

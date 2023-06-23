@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sysyphus</title>
     <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
@@ -13,17 +13,61 @@
     <header>
         <div class="header__left">
             <div class="header__left-logo">
-                <img width="121" height="34" src="./images/logo.svg"/>
+                <img width="121" height="34" src="./images/logo.svg" alt="" />
             </div>
-            <nav class="header__left-menu">
-                <div>Exchange</div>
-                <div>Wallets</div>
-                <div>Roqqo Hub</div>
+            <nav class="header__left-menu desktop">
+                <span>Exchange</span>
+                <span class="inactive-text">Wallets</span>
+                <span class="inactive-text">Roqqo Hub</span>
             </nav>
         </div>
-        <div class="header__right">B</div>
+        <div class="header__right">
+            <div class="header__right__profile">
+                <img class="rounded-full" src="./images/avatar.svg" alt="" />
+                <span>Olumuyiwa...</span>
+                <img src="./images/chevron-right.svg" alt="" />
+            </div>
+            <img src="./images/globe.svg" alt="" />
+            <img class="rounded-full mobile" src="./images/avatar.svg" alt="" />
+            <img class="desktop" src="./images/sign-out.svg" alt="" />
+            <img class="mobile" src="./images/menu.svg" alt="" />
+        </div>
     </header>
-    <section class="heading">2</section>
+    <section class="headings">
+        <div class="headings__item align-center">
+            <img src="./images/coin.svg" alt="" />
+            <span>BTC/USDT</span>
+            <img src="./images/dropdown.svg" />
+            <span class="text-success">$20,634</span>
+        </div>
+        <div class="flex overflow-y-hidden overflow-x-auto space-nowrap w-90">
+            <div class="headings__item  flex-col border-right">
+                <div class="flex gap-2">
+                    <img src="./images/clock.svg" /> <span class="text-dark text-sm">24hr change</span>
+                </div>
+                <span class="text-success">520.80 +1.25%</span>
+            </div>
+            <div class="headings__item  flex-col border-right">
+                <div class="flex gap-2">
+                    <img src="./images/arrow-up.svg" /> <span class="text-dark text-sm">24hr high</span>
+                </div>
+                <span class="text-primary">520.80 +1.25%</span>
+            </div>
+            <div class="headings__item  flex-col border-right">
+                <div class="flex gap-2">
+                    <img src="./images/arrow-down.svg" /> <span class="text-dark text-sm">24hr low</span>
+                </div>
+                <span class="text-primary">520.80 +1.25%</span>
+            </div>
+            <div class="headings__item  flex-col">
+                <div class="flex gap-2">
+                    <img src="./images/graph.svg" /> <span class="text-dark text-sm">24hr volume</span>
+                </div>
+                <span class="text-primary">520.80 +1.25%</span>
+            </div>
+        </div>
+      
+    </section>
     <section class="main">
         <main class="main__chart card">A</main>
         <main class="main__orderbook card">B</main>

@@ -22,3 +22,7 @@ $breakpoint argument choices
     }
   }
 }
+
+@mixin border-right($value: $border-width-default) {
+    $border-right: $value solid #A7B1BC
+  }

@@ -2,14 +2,19 @@
 $bg-primary: #1c2127;
 
 // Light variant of primary background color
-$bg-primary-light: lighten($bg-primary, 10%);
+$bg-primary-light: #32383F;
 
 // Dark variant of primary background color
 $bg-primary-dark: darken($bg-primary, 10%);
 
+$font-size-small: 12px;
 $font-size-base: 15px;
 $color-primary: white;
+$color-primary-success: #00C076;
+$color-primary-dark: #A7B1BC;
 
 $border-radius: 5px;
+$border-width-default:1px;
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-$border: 1px solid red
+$border: 1px solid red;
+$border-right: 0.1px ridge #A7B1BC;
