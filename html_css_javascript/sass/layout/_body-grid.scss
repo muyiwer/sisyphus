@@ -33,6 +33,7 @@ body {
     grid-template-columns: 60% 20% 19.5%;
     width: 100vw;
     gap: 3px;
+    margin: 2px;
     @include respond(phone){
         grid-template-columns: 100%;
         grid-template-rows: 60% 39%;

@@ -41,6 +41,12 @@
 .gap-2 {
   gap: 4px;
 }
+.gap-3 {
+  gap: 6px;
+}
+.gap-4 {
+  gap: 20px;
+}
 .align-center {
   align-items: center !important;
 }
@@ -62,4 +68,10 @@
 }
 .space-nowrap {
   white-space: nowrap;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.space-around{
+justify-content: space-around;
 }

@@ -1,0 +1,96 @@
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tabset__tab-panel {
+  display: none;
+}
+
+.tabset
+  > input:first-child:checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:first-child,
+.tabset
+  > input:nth-child(3):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(2),
+.tabset
+  > input:nth-child(5):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(3),
+.tabset
+  > input:nth-child(7):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(4),
+.tabset
+  > input:nth-child(9):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(5),
+.tabset
+  > input:nth-child(11):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(6) {
+  display: flex;
+}
+
+.tabset label {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  width: 110px;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  height: 4px;
+}
+
+input:focus-visible + label {
+  outline: 2px solid white;
+  border-radius: 3px;
+}
+
+.tabset input:focus + label,
+.tabset > input:checked + label {
+  background: $bg-primary-light;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+  width: 120px;
+  margin-left: 5px;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: $bg-primary;
+}
+
+.tabset > input:checked + label {
+  background-color: $bg-primary-light;
+  margin-bottom: -1px;
+}
+
+.tabset__tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 5px 20px 5px;
+}
+.tabset {
+  max-width: 20em;
+  background-color: #21262c !important;
+  height: 38px;
+  border-radius: 10px;
+  margin: 5px;
+}

@@ -1,26 +1,46 @@
 .main__chart {
+  display: flex;
+  flex-direction: column;
   height: 561px;
-  border: $border;
   @include respond(phone) {
     display: none;
   }
 }
 .main__orderbook {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   height: 561px;
-  border: $border;
   @include respond(phone) {
     display: none;
   }
 }
+.order-icon{
+ padding: 8px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+.order-table-header{
+  font-size: 9px;
+  margin:10px
+}
+.order-table-body{
+  font-size: 12px;
+  margin:10px
+}
+.order-icon-active{
+  background-color: #353945;
+  border-radius: 5px;
+}
 .main__purchase {
   height: 625px;
-  border: $border;
   @include respond(phone) {
     display: none;
   }
 }
 .main__order {
-  border: $border;
   @include respond(desktop) {
     grid-column: 1/3;
     margin-top: -60px;
@@ -37,6 +57,22 @@
   @include respond(phone) {
     display: block;
     height: auto;
-    border: $border;
   }
 }
+.main__chart__filter {
+  display: flex;
+  gap: 5px;
+  margin: 20px;
+}
+.main__chart__filter__item {
+  gap: 20px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+
+
