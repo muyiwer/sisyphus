@@ -25,6 +25,7 @@ export const useDropdownMenu = () => {
 
   const toggleDropdownMenu = () => {
     const dropdownMenu = document.getElementById("dropdown-menu");
+    console.log('first',dropdownMenu)
     const mainMenu = mainMenuRef.current;
 
     if (!dropdownMenu || !mainMenu) return;
