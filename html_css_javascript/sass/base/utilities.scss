@@ -130,3 +130,13 @@ justify-content: space-around;
 .bg-light{
     background-color: $bg-primary-light;
 }
+.cursor-pointer{
+   cursor: pointer; 
+}
+.date-active{
+    background-color: $bg-primary-active;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: -5px;
+    color: white !important;
+}

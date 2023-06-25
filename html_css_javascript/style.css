@@ -169,6 +169,16 @@ body {
 .bg-light {
   background-color: #262932; }
 
+.cursor-pointer {
+  cursor: pointer; }
+
+.date-active {
+  background-color: #353945;
+  padding: 5px;
+  border-radius: 15px;
+  margin-top: -5px;
+  color: white !important; }
+
 body {
   display: grid;
   grid-template-rows: 72px 80px auto auto;
