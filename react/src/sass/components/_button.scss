@@ -1,0 +1,84 @@
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 32px;
+  background-position: right center;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-buy{
+  text-align: center;
+  transition: 0.5s;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 32px;
+  width: 45%;
+  cursor: pointer;
+  border: none;
+  background-color: #25C26E;
+}
+.button{
+  appearance: auto;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  margin: 0em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
+  text-decoration: none;
+}
+.btn-sell{
+  text-align: center !important;
+  transition: 0.5s;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 32px;
+  width: 45%;
+  cursor: pointer;
+  border: none;
+  background-color: #FF554A;
+  padding-top: 5px;
+}
+
+.btn:hover {
+  background-position: left center;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(
+    to right,
+    #483beb 50%,
+    #7847e1 30%,
+    #dd568d 100%
+  );
+}
+
+.btn-deposit {
+  background-color: #2764ff;
+  color: white;
+  height: 32px;
+  width: 80px;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+}

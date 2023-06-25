@@ -1,0 +1,210 @@
+.main__orderbook-tabset > .main__orderbook__tabset-checkbox[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.main__orderbook-tabset .main__orderbook__tabset__tab-panel {
+  display: flex;
+}
+
+// .main__orderbook__tabset-checkbox:checked
+// ~ .main__orderbook__tabset__tab-panels 
+// > .main__orderbook__tabset__tab-panel:first-child{
+//   display: flex;
+// }
+
+.main__orderbook-
+  > .main__orderbook__tabset-checkbox:first-child:checked
+  ~ .main__orderbook__tabset__tab-panels
+  > .main__orderbook__tabset__tab-panel:first-child,
+.main__orderbook-tabset
+  > .main__orderbook__tabset-checkbox:nth-child(3):checked
+  ~ .main__orderbook__tabset__tab-panels
+  > .main__orderbook__tabset__tab-panel:nth-child(2),
+.main__orderbook-tabset
+  > .main__orderbook__tabset-checkbox:nth-child(5):checked
+  ~ .main__orderbook__tabset__tab-panels
+  > .main__orderbook__tabset__tab-panel:nth-child(3),
+.main__orderbook-tabset
+  > .main__orderbook__tabset-checkbox:nth-child(7):checked
+  ~ .main__orderbook__tabset__tab-panels
+  > .main__orderbook__tabset__tab-panel:nth-child(4),
+.main__orderbook-tabset
+  > .main__orderbook__tabset-checkbox:nth-child(9):checked
+  ~ .main__orderbook__tabset__tab-panels
+  > .main__orderbook__tabset__tab-panel:nth-child(5),
+.main__orderbook-tabset
+  > .main__orderbook__tabset-checkbox:nth-child(11):checked
+  ~ .main__orderbook__tabset__tab-panels
+  > .main__orderbook__tabset__tab-panel:nth-child(6) {
+  display: flex;
+}
+
+.main__orderbook-tabset .main__orderbook__tabset-label {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  width: 110px;
+}
+
+.main__orderbook-tabset > .main__orderbook__tabset-label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  height: 4px;
+}
+
+.main__orderbook__tabset-checkbox:focus-visible + .main__orderbook__tabset-label {
+  outline: 2px solid white;
+  border-radius: 3px;
+}
+
+.main__orderbook-tabset .main__orderbook__tabset-checkbox:focus + .main__orderbook__tabset-label,
+.main__orderbook-tabset > .main__orderbook__tabset-checkbox:checked + .main__orderbook__tabset-label {
+  background: $bg-primary-light;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+  width: 120px;
+  margin-left: 5px;
+}
+
+.main__orderbook-tabset > .main__orderbook__tabset-label:hover::after,
+.main__orderbook-tabset > .main__orderbook__tabset-checkbox:focus + .main__orderbook__tabset-label::after,
+.main__orderbook-tabset > .main__orderbook__tabset-checkbox:checked + .main__orderbook__tabset-label::after {
+  background: $bg-primary;
+}
+
+.main__orderbook-tabset > .main__orderbook__tabset-checkbox:checked + .main__orderbook__tabset-label {
+  background-color: $bg-primary-light;
+  margin-bottom: -1px;
+}
+
+.main__orderbook__tabset__tab-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 5px 20px 5px;
+}
+.main__orderbook-tabset {
+  max-width: 20em;
+  background-color: #21262c !important;
+  height: 38px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+
+
+
+
+
+
+.main__orderchart__tabset > .main__orderchart__tabset-checkbox[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.main__orderchart__tabset .tabset__tab-panel {
+  display: none;
+}
+
+.main__orderchart__tabset
+  > .main__orderchart__tabset-checkbox:first-child:checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:first-child,
+.main__orderchart__tabset
+  > .main__orderchart__tabset-checkbox:nth-child(3):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(2),
+.main__orderchart__tabset
+  > .main__orderchart__tabset-checkbox:nth-child(5):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(3),
+.main__orderchart__tabset
+  > .main__orderchart__tabset-checkbox:nth-child(7):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(4),
+.main__orderchart__tabset
+  > .main__orderchart__tabset-checkbox:nth-child(9):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(5),
+.main__orderchart__tabset
+  > .main__orderchart__tabset-checkbox:nth-child(11):checked
+  ~ .tabset__tab-panels
+  > .tabset__tab-panel:nth-child(6) {
+  display: flex;
+}
+
+.main__orderchart__tabset label {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  width: 90px;
+}
+
+.main__orderchart__tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  height: 4px;
+}
+
+.main__orderchart__tabset-checkbox:focus-visible + label {
+  outline: 2px solid white;
+  border-radius: 3px;
+}
+
+.main__orderchart__tabset .main__orderchart__tabset-checkbox:focus + label,
+.main__orderchart__tabset > .main__orderchart__tabset-checkbox:checked + label {
+  background: $bg-primary-light;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+  width: 100px;
+  margin-left: 5px;
+}
+
+.main__orderchart__tabset > label:hover::after,
+.main__orderchart__tabset > .main__orderchart__tabset-checkbox:focus + label::after,
+.main__orderchart__tabset > .main__orderchart__tabset-checkbox:checked + label::after {
+  background: $bg-primary;
+}
+
+.main__orderchart__tabset > .main__orderchart__tabset-checkbox:checked + label {
+  background-color: $bg-primary-light;
+  margin-bottom: -1px;
+}
+
+.tabset__tab-order {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px 5px 20px 5px;
+}
+.tabset__tab-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main__orderchart__tabset {
+  max-width: 100vw;
+  background-color: #21262c !important;
+  height: 38px;
+  border-radius: 10px;
+  margin: 5px;
+}

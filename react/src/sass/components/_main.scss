@@ -1,0 +1,246 @@
+.main__chart {
+  display: flex;
+  flex-direction: column;
+  height: 561px;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.main__orderbook {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 561px;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.order-icon{
+ padding: 8px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ cursor: pointer;
+}
+.order-table-header{
+  font-size: 9px;
+  margin:10px
+}
+.order-table-body{
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  gap: 15px;
+}
+.order-table-row{
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  gap: 15px;
+}
+.order-icon-active{
+  background-color: #353945;
+  border-radius: 5px;
+}
+.order-meter{
+  background-color: rgba(#FF6838,0.09);
+  height: 28px;
+  width: 110%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: $border-radius;
+}
+.order-meter2{
+  background-color: rgba(#FF6838,0.09);
+  height: 28px;
+  width: 50%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: $border-radius;
+}
+.order-meter-high{
+  background-color: rgba(#25C26E,0.09);
+  height: 28px;
+  width: 50%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: $border-radius;
+}
+.order-meter-high2{
+  background-color: rgba(#25C26E,0.09);
+  height: 28px;
+  width: 100%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: $border-radius;
+}
+.main__purchase {
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  height: auto;
+  gap:20px;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.main__purchase-modal {
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  height: auto;
+  gap:20px;
+}
+.main__purchase__order{
+  background-color: #21262c ;
+  border-radius: $border-radius;
+  height: 38px;
+  margin-top: -5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:5px
+}
+.main__purchase__order__buy{
+  background-color: $bg-primary-light;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #25C26E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+.main__purchase__order__sell{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: $border-radius;
+  cursor: pointer;
+}
+.main__purchase__menu-item{
+  padding: 5px 15px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-base;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.main__purchase__info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main__purchase__info-item{
+  border: 1px solid #373B3F;
+  border-radius: $border-radius;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: $font-size-small;
+}
+.main__purchase__menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__order {
+  position: relative;
+  @include respond(desktop) {
+    grid-column: 1/3;
+    height: 561px;
+    margin-top: -20px;
+  }
+  @include respond(phone) {
+    height: auto;
+  }
+}
+.order-tabset {
+  max-width: 40em;
+  background-color: #21262c !important;
+  height: 38px;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  gap:5px;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-items: center;
+  @include respond(phone) {
+    width: 93vw;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap:20px;
+  }
+}
+.main__purchase-mobile{
+  @include respond(desktop) {
+   display: none;
+  }
+  @include respond(phone) {
+    display: block;
+   }
+}
+.main__purchase-button{
+  padding:13px;
+  display: flex;
+  justify-content: space-between;
+}
+.tabset-active{
+  background-color: $bg-primary-light;
+  height: 1px;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  padding: 15px 35px 15px 35px;
+}
+.main__order__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 100px;
+  @include respond(phone) {
+    margin:20px
+  }
+}
+.main__orderchart {
+  @include respond(desktop) {
+    display: none;
+  }
+  @include respond(phone) {
+    display: block;
+    height: auto;
+    width: 100vw;
+  }
+}
+.main__chart__filter {
+  display: flex;
+  gap: 5px;
+  margin: 20px;
+}
+.main__chart__filter__item {
+  gap: 20px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+#container {
+  width: 100%;
+  height: 100%;
+}
+#container-mobile {
+  margin-left: -10px;
+  width: 100vw;
+  height: 330px;
+}
+
+

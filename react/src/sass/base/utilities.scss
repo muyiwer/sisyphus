@@ -1,0 +1,142 @@
+.rounded-full {
+  border-radius: 50%;
+}
+.mobile {
+  @include respond(desktop) {
+    display: none;
+  }
+}
+.desktop {
+  @include respond(phone) {
+    display: none;
+  }
+}
+.border-right {
+  border-right: $border-right !important;
+}
+.text-success {
+  color: $color-primary-success;
+}
+.text-dark {
+  color: $color-primary-dark;
+}
+.text-primary {
+  color: $color-primary;
+}
+.text-sm {
+  font-size: $font-size-small;
+}
+.text-xl {
+    font-size: 24px
+  }
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.gap-1 {
+  gap: 2px;
+}
+.gap-2 {
+  gap: 4px;
+}
+.gap-3 {
+  gap: 6px;
+}
+.gap-4 {
+  gap: 20px;
+}
+.align-center {
+  align-items: center !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+.w-full {
+  width: 100vw;
+}
+.w-90 {
+  width: 90vw;
+}
+.w-menu{
+width: 150px !important;
+}
+.w-30{
+    width: 70px;
+}
+.h-auto{
+    height: auto;
+}
+.space-nowrap {
+  white-space: nowrap;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+  }
+.space-around{
+justify-content: space-around;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position:absolute
+}
+.m-10{
+    margin-top: 20px;
+}
+.m-r-10{
+    margin-right: 40px;
+}
+.text-base{
+    font-size: $font-size-base;
+}
+.text-white{
+    color: white;
+}
+.active{
+    background-color: $bg-primary-active;
+}
+.divider{
+    height: 1px;
+    background-color: $bg-primary-active;
+}
+.text-center{
+    text-align: center;
+}
+.bg-primary{
+    background-color: $bg-primary;
+}
+.bg-dark{
+    background-color: $bg-primary-dark;
+}
+.bg-active{
+    background-color: $bg-primary-active;
+}
+.bg-light{
+    background-color: $bg-primary-light;
+}
+.cursor-pointer{
+   cursor: pointer; 
+}
+.date-active{
+    background-color: $bg-primary-active;
+    padding: 5px;
+    border-radius: 15px;
+    margin-top: -5px;
+    color: white !important;
+}

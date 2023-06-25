@@ -18,15 +18,6 @@ document.getElementById('auth-form').addEventListener('submit', function(e) {
             localStorage.setItem("email", email)
             window.location.href = "/dashboard.html"
           }
-        
-        // Display GitHub repositories
-        // const repositoriesList = document.createElement('ul');
-        // data.forEach(repo => {
-        //   const repositoryItem = document.createElement('li');
-        //   repositoryItem.textContent = repo.name;
-        //   repositoriesList.appendChild(repositoryItem);
-        // });
-        // container.appendChild(repositoriesList);
       })
       .catch(error => alert(error));
   });
