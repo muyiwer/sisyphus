@@ -4,7 +4,7 @@ import { Form } from "../atoms/form";
 import { Input } from "../atoms/input";
 
 export const AuthForm = () => {
-  const { email, setEmail, error, handleSubmit } = useAuthForm();
+  const {setEmail, error, handleSubmit } = useAuthForm();
   return (
     <Form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <label>Github Username/Email</label>
@@ -12,7 +12,6 @@ export const AuthForm = () => {
         type="text"
         className="input"
         placeholder="Enter your GitHub username or email"
-        value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
       />

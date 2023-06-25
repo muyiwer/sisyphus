@@ -1,36 +1,15 @@
+import { Filters } from "../organisms/filters";
+import AnyChart from "anychart-react/dist/anychart-react.min.js";
+import useAnyChart from "../../hooks/useCandleChart";
 export const MainMobile = () => {
+  const { chart } = useAnyChart();
   return (
     <section className="main mobile">
       <main className="main__chart card">
-        <div className="main__chart__filter justify-between">
-          <div className="flex">
-            <div className="main__chart__filter__item flex flex-row text-dark border-right">
-              <span>Time</span>
-              <span className="time cursor-pointer date-active">1H</span>
-              <span className="time cursor-pointer">2H</span>
-              <span className="time cursor-pointer">4H</span>
-              <span className="time cursor-pointer">1D</span>
-              <span className="time cursor-pointer">1W</span>
-              <span className="time cursor-pointer">1M</span>
-              <span className="time cursor-pointer">1Y</span>
-              {/* <img src={dropdownDarkImage} alt="" /> */}
-            </div>
-            <div className="main__chart__filter__item border-right">
-              <img src={"/images/candle.svg"} alt="" />
-            </div>
-            <div className="main__chart__filter__item border-right">
-              <span>Fx Indicators</span>
-            </div>
-            <div className="main__chart__filter__item border-right flex">
-              <img src="./images/back.svg" alt="" />
-              <img src="./images/front.svg" alt="" />
-            </div>
-          </div>
-          <div style={{ textAlign: "right" }}>
-            <img src={"/images/expand.svg"} alt="" />
-          </div>
+        <Filters />
+        <div id="container">
+          <AnyChart width={850} height={470} instance={chart} />
         </div>
-        <div id="container"></div>
       </main>
       <main className="main__orderbook card">
         <div className="main__orderbook-tabset">

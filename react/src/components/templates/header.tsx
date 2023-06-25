@@ -1,9 +1,14 @@
+import { useSelector } from "react-redux";
+import { State } from "../../model/state";
 import { Image } from "../atoms";
 import { Menu } from "../molecules/menu";
 import { UserProfile } from "../molecules/profile";
 import { DropdownMenu } from "../organisms/dropdownMenu";
 
 export const HeaderTemplate = () => {
+  const state = useSelector((state: any): State => {
+    return state.app?.value;
+  });
   return (
     <header>
       <div className="header__left">
@@ -21,6 +26,7 @@ export const HeaderTemplate = () => {
           className="rounded-full mobile"
           id="profile-pic"
           alt=""
+          src={state.profileSrc}
         />
         <Image className="desktop" src={"/images/sign-out.svg"} alt="" />
         <DropdownMenu />

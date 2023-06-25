@@ -1,17 +1,36 @@
+import useAnyChart from "../../hooks/useCandleChart";
+import { Filters } from "../organisms/filters";
+import AnyChart from "anychart-react/dist/anychart-react.min.js";
+import { useChart } from "../../hooks/useChart";
+import { State } from "../../model/state";
+import { useSelector } from "react-redux";
 export const OrderChat = () => {
+  const state = useSelector((state: any): State => {
+    return state.app?.value;
+  });
+  const { chart } = useAnyChart();
+  const { setTab } = useChart();
   return (
     <section className="main__orderchart-mobile">
       <main className="main__orderchart card">
         <div className="main__orderchart__tabset">
           <input
-            className="main__orderchart__tabset-checkbox"
+            className={`main__orderchart__tabset-checkbox ${
+              state.tab?.chart && "bg-light"
+            }`}
             type="radio"
             name="tabset"
             id="tab3"
             aria-controls="marzen"
+            onClick={() => setTab("chart")}
             checked
           />
-          <label className="main__orderchart__tabset-label" htmlFor="tab3">
+          <label
+            className={`main__orderchart__tabset-label ${
+              state.tab?.chart && "bg-light"
+            }`}
+            htmlFor="tab3"
+          >
             Charts
           </label>
           <input
@@ -19,9 +38,17 @@ export const OrderChat = () => {
             name="tabset"
             id="tab4"
             aria-controls="rauchbier"
-            className="main__orderchart__tabset-checkbox"
+            className={`main__orderchart__tabset-checkbox ${
+              state.tab?.orderBook && "bg-light"
+            }`}
+            onClick={() => setTab("orderBook")}
           />
-          <label className="main__orderchart__tabset-label" htmlFor="tab4">
+          <label
+            className={`main__orderchart__tabset-label ${
+              state.tab?.orderBook && "bg-light"
+            }`}
+            htmlFor="tab4"
+          >
             Order Book
           </label>
           <input
@@ -29,35 +56,36 @@ export const OrderChat = () => {
             name="tabset"
             id="tab5"
             aria-controls="rauchbier"
-            className="main__orderchart__tabset-checkbox"
+            className={`main__orderchart__tabset-checkbox ${
+              state.tab?.trade && "bg-light"
+            }`}
+            onClick={() => setTab("trade")}
           />
-          <label className="main__orderchart__tabset-label" htmlFor="tab5">
+          <label
+            className={`main__orderchart__tabset-label ${
+              state.tab?.trade && "bg-light"
+            }`}
+            htmlFor="tab5"
+          >
             Recent Trades
           </label>
 
           <div className="tabset__tab-panels">
-            <section className="tabset__tab-chart tabset__tab-panel">
-              <div className="main__chart__filter justify-between">
-                <div className="flex">
-                  <div className="main__chart__filter__item flex flex-row text-dark border-right">
-                    <span>Time</span>
-                    <span className="time cursor-pointer date-active">1H</span>
-                    <span className="time cursor-pointer">2H</span>
-                    <span className="time cursor-pointer">4H</span>
-                    <span className="time cursor-pointer">1D</span>
-                    <span className="time cursor-pointer">1W</span>
-                    <span className="time cursor-pointer">1M</span>
-                    <span className="time cursor-pointer">1Y</span>
-                    {/* <img src="./images//dropdown-dark.svg" alt="" /> */}
-                  </div>
-                </div>
-                <div style={{ textAlign: "right" }}>
-                  <img src="./images/expand.svg" alt="" />
-                </div>
+            <section
+              className={`tabset__tab-chart tabsets__tab-panel ${
+                !state.tab?.chart && "none"
+              }`}
+            >
+              <Filters />
+              <div id="container">
+                <AnyChart width={400} height={470} instance={chart} />
               </div>
-              <div id="container-mobile"></div>
             </section>
-            <section className="tabset__tab-order tabset__tab-panel">
+            <section
+              className={`tabset__tab-order tabsets__tab-panel ${
+                !state.tab?.orderBook && "none"
+              }`}
+            >
               <div className="flex flex-row justify-between">
                 <div className="flex flex-row justify-between gap-4">
                   <div className="order-icon order-icon-active">
@@ -138,7 +166,11 @@ export const OrderChat = () => {
                 </div>
               </div>
             </section>
-            <section className="tabset__tab-order tabset__tab-panel">
+            <section
+              className={`tabset__tab-order tabsets__tab-panel ${
+                !state.tab?.trade && "none"
+              }`}
+            >
               <h2>No Trades</h2>
             </section>
           </div>
@@ -147,4 +179,3 @@ export const OrderChat = () => {
     </section>
   );
 };
-

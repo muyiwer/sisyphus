@@ -171,7 +171,7 @@
 
 .main__orderchart__tabset .main__orderchart__tabset-checkbox:focus + label,
 .main__orderchart__tabset > .main__orderchart__tabset-checkbox:checked + label {
-  background: $bg-primary-light;
+  //background: $bg-primary-light;
   border-radius: 10px;
   padding: 6px;
   text-align: center;
@@ -186,7 +186,7 @@
 }
 
 .main__orderchart__tabset > .main__orderchart__tabset-checkbox:checked + label {
-  background-color: $bg-primary-light;
+  //background-color: $bg-primary-light;
   margin-bottom: -1px;
 }
 
