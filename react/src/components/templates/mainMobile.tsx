@@ -1,14 +1,16 @@
 import { Filters } from "../organisms/filters";
 import AnyChart from "anychart-react/dist/anychart-react.min.js";
-import useAnyChart from "../../hooks/useCandleChart";
+import { useRef } from "react";
+import { useAnyChartForDesktop } from "../../hooks/useCandleStickForDesktop";
 export const MainMobile = () => {
-  const { chart } = useAnyChart();
+  const chartContainerRef = useRef<HTMLDivElement | null>(null);
+  const { chart } = useAnyChartForDesktop();
   return (
     <section className="main mobile">
       <main className="main__chart card">
         <Filters />
-        <div id="container">
-          <AnyChart width={850} height={470} instance={chart} />
+        <div ref={chartContainerRef} id="container">
+          <AnyChart  width={850} height={470} instance={chart} />
         </div>
       </main>
       <main className="main__orderbook card">
@@ -149,12 +151,20 @@ export const MainMobile = () => {
             </div>
             <span className="text-dark">0.00 USD</span>
           </div>
-          <div className="main__purchase__info-item">
-            <div className="flex gap-2">
+          <div className="main__purchase__info-item item-center">
+            <div className="flex gap-2 item-center">
               <span className="text-dark">Type</span>
               <img src={"/images/info.svg"} alt="" />
             </div>
-            <span className="text-dark">Gone till cancelled</span>
+            {/* <span className="text-dark">Gone till cancelled</span> */}
+            <div className="select-dropdown bg-light text-dark text-sm">
+              <select className="text-sm">
+                <option  value="Option 1">Gone till cancelled</option>
+                <option  value="Option 2">Good till end</option>
+                <option  value="Option 3">Fill or kill</option>
+                <option  value="Option 4">Immediate or cancel</option>
+              </select>
+            </div>
           </div>
         </div>
         <div className="flex gap-3">

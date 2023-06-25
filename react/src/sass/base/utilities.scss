@@ -24,7 +24,7 @@
   color: $color-primary;
 }
 .text-sm {
-  font-size: $font-size-small;
+  font-size: $font-size-small !important;
 }
 .text-xl {
     font-size: 24px
@@ -89,6 +89,15 @@ width: 150px !important;
   }
 .space-around{
 justify-content: space-around;
+}
+.item-end{
+  align-items: flex-end;
+}
+.item-start{
+  align-items: flex-start;
+}
+.item-center{
+  align-items: center;
 }
 .relative{
     position: relative;

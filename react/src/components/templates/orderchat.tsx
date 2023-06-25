@@ -4,11 +4,13 @@ import AnyChart from "anychart-react/dist/anychart-react.min.js";
 import { useChart } from "../../hooks/useChart";
 import { State } from "../../model/state";
 import { useSelector } from "react-redux";
+import { useRef } from "react";
 export const OrderChat = () => {
+  const chartContainerRef = useRef<HTMLDivElement | null>(null);
   const state = useSelector((state: any): State => {
     return state.app?.value;
   });
-  const { chart } = useAnyChart();
+  const { chart } = useAnyChart("ontainer-mobile");
   const { setTab } = useChart();
   return (
     <section className="main__orderchart-mobile">
@@ -67,7 +69,7 @@ export const OrderChat = () => {
             }`}
             htmlFor="tab5"
           >
-            Recent Trades
+            Recent Trade
           </label>
 
           <div className="tabset__tab-panels">
@@ -77,8 +79,13 @@ export const OrderChat = () => {
               }`}
             >
               <Filters />
-              <div id="container">
-                <AnyChart width={400} height={470} instance={chart} />
+              <div ref={chartContainerRef} id="container-mobile">
+                <AnyChart
+                  id="chart-container"
+                  width={370}
+                  height={320}
+                  instance={chart}
+                />
               </div>
             </section>
             <section

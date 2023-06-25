@@ -1,3 +1,4 @@
+import { useApi } from "../../hooks/useApi"
 import { useDashboard } from "../../hooks/useDashboard"
 import { HeaderTemplate } from "../templates/header"
 import { Headings } from "../templates/headings"
@@ -9,6 +10,7 @@ import { PurchaseSection } from "../templates/purchaseSection"
 
 export const Dashboard = () => {
   useDashboard()
+  useApi()
   return (
     <section className="body">
         <HeaderTemplate/>

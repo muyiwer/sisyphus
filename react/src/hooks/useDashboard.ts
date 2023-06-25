@@ -21,6 +21,9 @@ export const useDashboard = () => {
           ...state.tab,
           chart:true
         },
+        activeTime:{
+          oneHr:true
+        },
         profileSrc,
         email
       })

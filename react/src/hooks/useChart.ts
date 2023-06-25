@@ -3,12 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { Time } from "../model/enum";
 import { State } from "../model/state";
 import { setAllAppState } from "../store";
+import { apiConfig } from "../store/apiConfig";
+import { useApi } from "./useApi";
 
 export const useChart = () => {
   const dispatch = useDispatch();
   const state = useSelector((state: any): State => {
     return state.app?.value;
   });
+  const { getData } = useApi();
   const setTimeInterval = useCallback((value: string) => {
     dispatch(
       setAllAppState({
@@ -25,6 +28,10 @@ export const useChart = () => {
         },
       })
     );
+    getData({
+      url:
+        apiConfig.Klines.Get + `symbol=LTCBTC&interval=${value.toLowerCase()}`,
+    });
   }, []);
   const setTab = useCallback((value: string) => {
     dispatch(
