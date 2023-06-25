@@ -26,6 +26,9 @@
 .text-sm {
   font-size: $font-size-small;
 }
+.text-xl {
+    font-size: 24px
+  }
 .flex {
   display: flex;
 }
@@ -72,6 +75,34 @@
 .justify-between {
   justify-content: space-between;
 }
+.justify-center {
+    justify-content: center;
+  }
 .space-around{
 justify-content: space-around;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position:absolute
+}
+.m-10{
+    margin-top: 20px;
+}
+.m-r-10{
+    margin-right: 40px;
+}
+.text-base{
+    font-size: $font-size-base;
+}
+.active{
+    background-color: $bg-primary-active;
+}
+.divider{
+    height: 1px;
+    background-color: $bg-primary-active;
+}
+.text-center{
+    text-align: center;
 }

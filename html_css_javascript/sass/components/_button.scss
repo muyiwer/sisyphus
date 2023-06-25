@@ -1,0 +1,36 @@
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 32px;
+  background-position: right center;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-position: left center;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(
+    to right,
+    #483beb 50%,
+    #7847e1 30%,
+    #dd568d 100%
+  );
+}
+
+.btn-deposit {
+  background-color: #2764ff;
+  color: white;
+  height: 32px;
+  width: 80px;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+}

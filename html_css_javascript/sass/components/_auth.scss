@@ -1,0 +1,20 @@
+.auth {
+  top: 25%;
+  left: 40%;
+  position: absolute;
+  width: 20%;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input {
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid $bg-primary-light;
+  box-sizing: border-box;
+  background-color: $bg-primary-active;
+  border-radius: 10px;
+  color: white;
+}

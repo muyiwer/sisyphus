@@ -66,6 +66,9 @@ body {
 .text-sm {
   font-size: 12px; }
 
+.text-xl {
+  font-size: 24px; }
+
 .flex {
   display: flex; }
 
@@ -111,8 +114,36 @@ body {
 .justify-between {
   justify-content: space-between; }
 
+.justify-center {
+  justify-content: center; }
+
 .space-around {
   justify-content: space-around; }
+
+.relative {
+  position: relative; }
+
+.absolute {
+  position: absolute; }
+
+.m-10 {
+  margin-top: 20px; }
+
+.m-r-10 {
+  margin-right: 40px; }
+
+.text-base {
+  font-size: 15px; }
+
+.active {
+  background-color: #353945; }
+
+.divider {
+  height: 1px;
+  background-color: #353945; }
+
+.text-center {
+  text-align: center; }
 
 body {
   display: grid;
@@ -156,6 +187,12 @@ header {
       grid-template-rows: 60% 39%;
       height: 600px;
       width: 100%; } }
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding-bottom: 10px; }
 
 .tabset > input[type="radio"] {
   position: absolute;
@@ -313,27 +350,159 @@ input:focus-visible + label {
 
 .order-table-body {
   font-size: 12px;
-  margin: 10px; }
+  margin-left: 5px;
+  margin-right: 5px;
+  gap: 15px; }
+
+.order-table-row {
+  font-size: 12px;
+  margin-left: 5px;
+  margin-right: 5px;
+  gap: 15px; }
 
 .order-icon-active {
   background-color: #353945;
   border-radius: 5px; }
 
+.order-meter {
+  background-color: rgba(255, 104, 56, 0.09);
+  height: 28px;
+  width: 110%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: 5px; }
+
+.order-meter2 {
+  background-color: rgba(255, 104, 56, 0.09);
+  height: 28px;
+  width: 50%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: 5px; }
+
+.order-meter-high {
+  background-color: rgba(37, 194, 110, 0.09);
+  height: 28px;
+  width: 50%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: 5px; }
+
+.order-meter-high2 {
+  background-color: rgba(37, 194, 110, 0.09);
+  height: 28px;
+  width: 100%;
+  right: -5%;
+  bottom: -5px;
+  border-radius: 5px; }
+
 .main__purchase {
-  height: 625px; }
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: auto;
+  gap: 20px; }
   @media (max-width: 600px) {
     .main__purchase {
       display: none; } }
 
-@media (min-width: 600px) {
-  .main__order {
-    grid-column: 1/3;
-    margin-top: -60px;
-    height: 561px; } }
+.main__purchase__order {
+  background-color: #21262c;
+  border-radius: 5px;
+  height: 38px;
+  margin-top: -5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px; }
 
-@media (max-width: 600px) {
-  .main__order {
-    height: auto; } }
+.main__purchase__order__buy {
+  background-color: #262932;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #25C26E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.main__purchase__order__sell {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.main__purchase__menu-item {
+  padding: 5px 15px 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 15px;
+  cursor: pointer; }
+
+.main__purchase__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; }
+
+.main__purchase__info-item {
+  border: 1px solid #373B3F;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px; }
+
+.main__purchase__menu {
+  display: flex;
+  justify-content: space-between; }
+
+.main__order {
+  position: relative; }
+  @media (min-width: 600px) {
+    .main__order {
+      grid-column: 1/3;
+      height: 561px;
+      margin-top: -20px; } }
+  @media (max-width: 600px) {
+    .main__order {
+      height: auto; } }
+
+.order-tabset {
+  max-width: 40em;
+  background-color: #21262c !important;
+  height: 38px;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-items: center; }
+
+.tabset-active {
+  background-color: #262932;
+  height: 1px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 15px 35px 15px 35px; }
+
+.main__order__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 100px; }
 
 @media (min-width: 600px) {
   .main__orderchart {
@@ -378,3 +547,89 @@ input:focus-visible + label {
 .card {
   border-radius: 5px;
   background-color: #262932; }
+
+input[type="checkbox"] {
+  position: relative;
+  border: 2px solid #2764ff;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 0.6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  opacity: 0.5;
+  border-radius: 5px; }
+
+input[type="checkbox"]:hover {
+  opacity: 1; }
+
+input[type="checkbox"]:checked {
+  background-color: #2764ff;
+  opacity: 1; }
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 5px; }
+
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  height: 32px;
+  background-position: right center;
+  cursor: pointer;
+  border: none; }
+
+.btn:hover {
+  background-position: left center; }
+
+.btn-gradient {
+  background-image: linear-gradient(to right, #483beb 50%, #7847e1 30%, #dd568d 100%); }
+
+.btn-deposit {
+  background-color: #2764ff;
+  color: white;
+  height: 32px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; }
+
+.auth {
+  top: 25%;
+  left: 40%;
+  position: absolute;
+  width: 20%;
+  padding: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; }
+
+.input {
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #262932;
+  box-sizing: border-box;
+  background-color: #353945;
+  border-radius: 10px;
+  color: white; }

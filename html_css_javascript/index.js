@@ -1,3 +1,18 @@
+//validate user authentication
+if(!localStorage.getItem("profile")){
+  window.location.href = "/"
+}
+
+//User profile picture implementation
+const profileSrc = localStorage.getItem("profile");
+const imageElement = document.getElementById('profile-pic');
+imageElement.setAttribute('src', profileSrc);
+
+//user profile name
+const email = localStorage.getItem("email");
+const profileNameElement = document.getElementById('profile-name');
+profileNameElement.textContent = email
+
 anychart.onDocumentReady(function () {
   // set the data
   table = anychart.data.table();
