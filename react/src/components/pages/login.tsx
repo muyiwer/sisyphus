@@ -1,6 +1,7 @@
+import { AuthTemplates } from "../templates/auth"
 
 export const Login = () => {
   return (
-    <div>L</div>
+    <AuthTemplates/>
   )
 }

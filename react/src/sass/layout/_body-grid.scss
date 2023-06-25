@@ -1,5 +1,6 @@
-body {
+.body {
   display: grid;
+  width: 100vw;
   grid-template-rows: 72px 80px auto auto;
   grid-template-columns: 100vw;
   @include respond(phone) {

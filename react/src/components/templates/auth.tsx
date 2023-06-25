@@ -1,13 +1,13 @@
 import { LoginTitle } from "../atoms/title"
+import {AuthForm } from "../molecules/form"
 import { LoginLogo } from "../molecules/login_logo"
-import { Form } from "../organisms/form"
 
-export const Auth = () => {
+export const AuthTemplates = () => {
   return (
     <section className="auth card">
       <LoginLogo />
       <LoginTitle />
-      <Form />
+      <AuthForm />
     </section>
   )
 }

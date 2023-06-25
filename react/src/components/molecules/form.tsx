@@ -1,11 +1,14 @@
 import { useAuthForm } from "../../hooks/useAuthForm";
+import { Button } from "../atoms/button";
+import { Form } from "../atoms/form";
+import { Input } from "../atoms/input";
 
-export const Form = () => {
+export const AuthForm = () => {
   const { email, setEmail, error, handleSubmit } = useAuthForm();
   return (
-    <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+    <Form className="flex flex-col gap-3" onSubmit={handleSubmit}>
       <label>Github Username/Email</label>
-      <input
+      <Input
         type="text"
         className="input"
         placeholder="Enter your GitHub username or email"
@@ -13,10 +16,10 @@ export const Form = () => {
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <button type="submit" className="btn btn-gradient m-10">
+      <Button type="submit" className="btn btn-gradient m-10">
         Submit
-      </button>
-      {error && <p style={{color: 'red', textAlign:'center'}}>{error}</p>}
-    </form>
+      </Button>
+      {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+    </Form>
   );
 };
