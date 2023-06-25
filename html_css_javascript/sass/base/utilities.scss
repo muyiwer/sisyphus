@@ -69,6 +69,15 @@
 .w-90 {
   width: 90vw;
 }
+.w-menu{
+width: 150px !important;
+}
+.w-30{
+    width: 70px;
+}
+.h-auto{
+    height: auto;
+}
 .space-nowrap {
   white-space: nowrap;
 }
@@ -96,6 +105,9 @@ justify-content: space-around;
 .text-base{
     font-size: $font-size-base;
 }
+.text-white{
+    color: white;
+}
 .active{
     background-color: $bg-primary-active;
 }
@@ -105,4 +117,16 @@ justify-content: space-around;
 }
 .text-center{
     text-align: center;
+}
+.bg-primary{
+    background-color: $bg-primary;
+}
+.bg-dark{
+    background-color: $bg-primary-dark;
+}
+.bg-active{
+    background-color: $bg-primary-active;
+}
+.bg-light{
+    background-color: $bg-primary-light;
 }

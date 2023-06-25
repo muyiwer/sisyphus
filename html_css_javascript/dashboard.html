@@ -28,14 +28,35 @@
         </div>
         <div class="header__right">
             <div class="header__right__profile">
-                <img width="32" height="32" class="rounded-full" id="profile-pic" alt="" />
+                <img width="32" height="32" class="rounded-full" id="profile-pic-mobile" alt="" />
                 <span id="profile-name">Olumuyiwa...</span>
                 <img src="./images/chevron-right.svg" alt="" />
             </div>
             <img src="./images/globe.svg" alt="" />
             <img width="32" height="32" class="rounded-full mobile" id="profile-pic" alt="" />
             <img class="desktop" src="./images/sign-out.svg" alt="" />
-            <img class="mobile" src="./images/menu.svg" alt="" />
+            <!-- <img class="mobile" src="./images/menu.svg" alt="" /> -->
+            <main class="dropdown-menu mobile" id="dropdown-menu">
+                <button class="bg-primary w-30" id="dropdown-button" onclick="toggleDropdownMenu()">
+                    <img class="mobile" src="./images/menu.svg" alt="" />
+                    <span id="chevron" class="chevron material-symbols-outlined">
+                    </span>
+                </button>
+                <section id="main-menu" class="main-menu bg-primary w-menu">
+                    <button>
+                        <span class="material-symbols-outlined"> Exchange </span>
+                    </button>
+                    <button>
+                        <span class="material-symbols-outlined"> Wallet </span>
+                    </button>
+                    <button>
+                        <span class="material-symbols-outlined"> Roqqu Hub </span>
+                    </button>
+                    <button>
+                        <span class="material-symbols-outlined"> Log Out </span>
+                    </button>
+                </section>
+            </main>
         </div>
     </header>
     <section class="headings">
@@ -76,7 +97,7 @@
             </div>
         </div>
     </section>
-    <section class="main">
+    <section class="main mobile">
         <main class="main__chart card">
             <div class="main__chart__filter justify-between">
                 <div class="flex">
@@ -88,7 +109,8 @@
                         <span>1D</span>
                         <span>1W</span>
                         <span>1M</span>
-                        <img src="./images//dropdown-dark.svg" alt="" />
+                        <span>1Y</span>
+                        <!-- <img src="./images//dropdown-dark.svg" alt="" /> -->
                     </div>
                     <div class="main__chart__filter__item border-right">
                         <img src="./images/candle.svg" />
@@ -108,14 +130,16 @@
             <div id="container"></div>
         </main>
         <main class="main__orderbook card">
-            <div class="tabset">
-                <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked />
-                <label for="tab1">Order Book</label>
-                <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier" />
-                <label for="tab2">Recent Trades</label>
+            <div class="main__orderbook-tabset">
+                <input class="main__orderbook__tabset-checkbox" type="radio" name="tabset" id="tab1"
+                    aria-controls="marzen" checked />
+                <label class="main__orderbook__tabset-label" for="tab1">Order Book</label>
+                <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier"
+                    class="main__orderbook__tabset-checkbox" />
+                <label class="main__orderbook__tabset-label" for="tab2">Recent Trades</label>
 
-                <div class="tabset__tab-panels">
-                    <section class="tabset__tab-panel">
+                <div class="main__orderbook__tabset__tab-panels">
+                    <section class="main__orderbook__tabset__tab-panel">
                         <div class="flex flex-row justify-between">
                             <div class="flex flex-row justify-between gap-4">
                                 <div class="order-icon order-icon-active">
@@ -128,7 +152,13 @@
                                     <img src="./images//order.svg" alt="" />
                                 </div>
                             </div>
-                            <div>2</div>
+                            <div class="select-dropdown bg-active text-white">
+                                <select>
+                                    <option value="Option 1">10</option>
+                                    <option value="Option 2">20</option>
+                                    <option value="Option 3">30</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="order-table-header text-dark flex justify-between">
                             <div class="flex flex-col gap-1">
@@ -187,8 +217,8 @@
                             </div>
                         </div>
                     </section>
-                    <section class="tabset__tab-panel">
-                        <h2>No Trades</h2>
+                    <section class="main__orderbook__tabset__tab-panel">
+                        <!-- <h2>No Trades</h2> -->
                     </section>
                 </div>
             </div>
@@ -243,7 +273,11 @@
                     <span>0.00</span>
                 </div>
                 <div>
-                    <span class="text-dark">NGN</span>
+                    <div class="select-dropdown bg-light text-dark">
+                        <select>
+                            <option value="Option 1">NGN</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             <div class="flex justify-between">
@@ -258,7 +292,7 @@
             </div>
             <button class="btn-deposit">Deposit</button>
         </main>
-        <main class="main__orderchart card">E</main>
+
         <main class="main__order card">
             <div class="order-tabset">
                 <div class="tabset-active">Open Orders</div>
@@ -268,12 +302,230 @@
             </div>
             <div class="main__order__content">
                 <span class="text-xl">No Open Orders</span>
-                <span class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id pulvinar nullam sit imperdiet
-                    pulvinar.</span>
+                <span class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
+                    pulvinar nullam sit imperdiet pulvinar.</span>
             </div>
         </main>
     </section>
+    <section class="main__orderchart-mobile">
+        <main class="main__orderchart card">
+            <div class="main__orderchart__tabset">
+                <input class="main__orderchart__tabset-checkbox" type="radio" name="tabset" id="tab3"
+                    aria-controls="marzen" checked />
+                <label class="main__orderchart__tabset-label" for="tab3">Charts</label>
+                <input type="radio" name="tabset" id="tab4" aria-controls="rauchbier"
+                    class="main__orderchart__tabset-checkbox" />
+                <label class="main__orderchart__tabset-label" for="tab4">Order Book</label>
+                <input type="radio" name="tabset" id="tab5" aria-controls="rauchbier"
+                    class="main__orderchart__tabset-checkbox" />
+                <label class="main__orderchart__tabset-label" for="tab5">Recent Trades</label>
+
+                <div class="tabset__tab-panels">
+                    <section class="tabset__tab-chart tabset__tab-panel">
+                        <div class="main__chart__filter justify-between">
+                            <div class="flex">
+                                <div class="main__chart__filter__item flex flex-row text-dark border-right">
+                                    <span>Time</span>
+                                    <span>1H</span>
+                                    <span>2H</span>
+                                    <span>4H</span>
+                                    <span>1D</span>
+                                    <span>1W</span>
+                                    <span>1M</span>
+                                    <span>1Y</span>
+                                    <!-- <img src="./images//dropdown-dark.svg" alt="" /> -->
+                                </div>
+                            </div>
+                            <div style="text-align: right">
+                                <img src="./images/expand.svg" />
+                            </div>
+                        </div>
+                        <div id="container-mobile"></div>
+                    </section>
+                    <section class="tabset__tab-order tabset__tab-panel">
+                        <div class="flex flex-row justify-between">
+                            <div class="flex flex-row justify-between gap-4">
+                                <div class="order-icon order-icon-active">
+                                    <img src="./images//order.svg" alt="" />
+                                </div>
+                                <div class="order-icon">
+                                    <img src="./images//order.svg" alt="" />
+                                </div>
+                                <div class="order-icon">
+                                    <img src="./images//order.svg" alt="" />
+                                </div>
+                            </div>
+                            <div class="select-dropdown bg-active text-white">
+                                <select>
+                                    <option value="Option 1">10</option>
+                                    <option value="Option 2">20</option>
+                                    <option value="Option 3">30</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="order-table-header text-dark flex justify-between">
+                            <div class="flex flex-col gap-1">
+                                <span>Price</span><span>(USDT)</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span>Amounts</span><span>(BTC)</span>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span>Total</span>
+                            </div>
+                        </div>
+                        <div class="order-table-body flex flex-col gap-2">
+                            <div class="order-table-row flex justify-between relative">
+                                <span>36920.21</span>
+                                <span>0.758965</span>
+                                <span>28.020.98</span>
+                                <div class="order-meter absolute"></div>
+                            </div>
+                            <div class="order-table-row flex justify-between relative">
+                                <span>36920.21</span>
+                                <span>0.758965</span>
+                                <span>28.020.98</span>
+                                <div class="absolute"></div>
+                            </div>
+                            <div class="order-table-row flex justify-between relative">
+                                <span>36920.21</span>
+                                <span>0.758965</span>
+                                <span>28.020.98</span>
+                                <div class="order-meter2 absolute"></div>
+                            </div>
+                        </div>
+                        <div class="order-table-body m-10 flex flex-row gap-2 justify-center">
+                            <span class="text-success text-base">36.641.20</span>
+                            <img src="./images/arrow-up.svg" />
+                            <span class="text-success text-base">36.641.20</span>
+                        </div>
+                        <div class="order-table-body m-10 flex flex-col gap-2">
+                            <div class="order-table-row flex justify-between relative">
+                                <span>36920.21</span>
+                                <span>0.758965</span>
+                                <span>28.020.98</span>
+                                <div class="order-meter-high absolute"></div>
+                            </div>
+                            <div class="order-table-row flex justify-between relative">
+                                <span>36920.21</span>
+                                <span>0.758965</span>
+                                <span>28.020.98</span>
+                                <div class="absolute"></div>
+                            </div>
+                            <div class="order-table-row flex justify-between relative">
+                                <span>36920.21</span>
+                                <span>0.758965</span>
+                                <span>28.020.98</span>
+                                <div class="order-meter-high2 absolute"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="tabset__tab-order tabset__tab-panel">
+                        <h2>No Trades</h2>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </section>
+    <section class="main__purchase-mobile">
+        <main class="main__purchase-button card">
+            <a href="#openModal-about" class="button btn-buy">Buy</a>
+            <a href="#openModal-about" class="button btn-sell">Sell</a>
+        </main>
+
+    </section>
+    <section class="main-mobile">
+        <main class="main__order card">
+            <div class="order-tabset">
+                <div class="tabset-active">Open Orders</div>
+                <div>Positions</div>
+                <div>Order History</div>
+                <div class="m-r-10">Trade History</div>
+            </div>
+            <div class="main__order__content">
+                <span class="text-base">No Open Orders</span>
+                <span class="text-dark tex-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id
+                    pulvinar nullam sit imperdiet pulvinar.</span>
+            </div>
+        </main>
+    </section>
+
+
+
+    <div id="openModal-about" class="modal-dialog">
+        <div class="main__purchase-modal">
+            <a href="#close" title="Close" class="close">X</a>
+            <div class="main__purchase__order">
+                <div class="main__purchase__order__buy">Buy</div>
+                <div class="main__purchase__order__sell">Sell</div>
+            </div>
+            <div class="main__purchase__menu">
+                <div class="main__purchase__menu-item active text-dark">Limit</div>
+                <div class="main__purchase__menu-item text-dark">Market</div>
+                <div class="main__purchase__menu-item text-dark">Stop-Limit</div>
+            </div>
+            <div class="main__purchase__info">
+                <div class="main__purchase__info-item">
+                    <div class="flex gap-2">
+                        <span class="text-dark">Limit Price</span>
+                        <img src="./images/info.svg" />
+                    </div>
+                    <span class="text-dark">0.00 USD</span>
+                </div>
+                <div class="main__purchase__info-item">
+                    <div class="flex gap-2">
+                        <span class="text-dark">Amount</span>
+                        <img src="./images/info.svg" />
+                    </div>
+                    <span class="text-dark">0.00 USD</span>
+                </div>
+                <div class="main__purchase__info-item">
+                    <div class="flex gap-2">
+                        <span class="text-dark">Type</span>
+                        <img src="./images/info.svg" />
+                    </div>
+                    <span class="text-dark">Gone till cancelled</span>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <input type="checkbox" class="checkbox" checked />
+                <span>Post only</span>
+                <img src="./images/info.svg" />
+            </div>
+            <div class="flex justify-between text-dark text-sm">
+                <span>Total</span>
+                <span>0.00</span>
+            </div>
+            <button class="btn btn-gradient">Buy BTC</button>
+            <div class="divider"></div>
+            <div class="flex justify-between">
+                <div class="flex flex-col gap-3">
+                    <span class="text-dark text-sm">Total account value</span>
+                    <span>0.00</span>
+                </div>
+                <div>
+                    <div class="select-dropdown bg-light text-dark">
+                        <select>
+                            <option value="Option 1">NGN</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div class="flex flex-col gap-3">
+                    <span class="text-dark text-sm">Open orders</span>
+                    <span>0.00</span>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="text-dark text-sm">Available</span>
+                    <span>0.00</span>
+                </div>
+            </div>
+            <button class="btn-deposit">Deposit</button>
+        </div>
+    </div>
     <footer>Copyright Olumuyiwa Aro</footer>
+    <script type="text/javascript" src="./dropdown.js"></script>
     <script type="text/javascript" src="./index.js"></script>
 </body>
 

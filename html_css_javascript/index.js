@@ -6,7 +6,9 @@ if(!localStorage.getItem("profile")){
 //User profile picture implementation
 const profileSrc = localStorage.getItem("profile");
 const imageElement = document.getElementById('profile-pic');
+const imageElementMobile = document.getElementById('profile-pic-mobile');
 imageElement.setAttribute('src', profileSrc);
+imageElementMobile.setAttribute('src', profileSrc);
 
 //user profile name
 const email = localStorage.getItem("email");
@@ -90,11 +92,14 @@ anychart.onDocumentReady(function () {
 
   // chart type
   var chart = anychart.stock();
+  var mobileChart = anychart.stock();
 
   chart.background().fill("#262932");
+  mobileChart.background().fill("#262932");
 
   // set the series
   var series = chart.plot(0).candlestick(mapping);
+  var mobileSeries = mobileChart.plot(0).candlestick(mapping);
 
   // set the custom colors for Globex series
   series.risingStroke("#58BD7D");
@@ -102,9 +107,21 @@ anychart.onDocumentReady(function () {
   series.fallingStroke("#FF6838");
   series.fallingFill("#FF6838");
 
+  mobileSeries.risingStroke("#58BD7D");
+  mobileSeries.risingFill("#58BD7D");
+  mobileSeries.fallingStroke("#FF6838");
+  mobileSeries.fallingFill("#FF6838");
+
   series.name("");
 
   chart.container("container");
 
+
+  mobileChart.container("container-mobile");
+
   chart.draw();
+  mobileChart.draw();
+
+
+
 });
