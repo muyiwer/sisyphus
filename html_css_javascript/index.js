@@ -96,7 +96,6 @@ timeElements.forEach(function(timeElement) {
 const generateGraph = (data) => {
   const table = anychart.data.table();
     table.addData(data)
-    console.log(data)
     // map the data
     mapping = table.mapAs();
     mapping.addField("open", 1);
@@ -143,5 +142,3 @@ anychart.onDocumentReady(function () {
   generateGraph(data)
 
 });
-
-
