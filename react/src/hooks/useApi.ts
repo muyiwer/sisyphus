@@ -1,7 +1,7 @@
 import { useGetDataMutation } from "../store";
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "../model/state";
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import { setAllAppState } from "../store";
 import { apiConfig } from "../store/apiConfig";
 
